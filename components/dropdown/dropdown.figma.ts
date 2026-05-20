@@ -5,18 +5,9 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     disabled: figma.enum('State', {
       disabled: true,
     }),
-    placement: figma.enum('Placement', {
-      bottomLeft: 'bottomLeft',
-      bottomCenter: 'bottomCenter',
-      bottomRight: 'bottomRight',
-      topLeft: 'topLeft',
-      topCenter: 'topCenter',
-      topRight: 'topRight',
-      bottom: undefined,
-    }),
   },
   example: (props) =>
-    html`<a-dropdown disabled="${props.disabled}" placement="${props.placement}">
+    html`<a-dropdown disabled="${props.disabled}">
   <a-button>Hover me</a-button>
   <template #overlay>
     <a-menu :items="[{ key: '1', label: 'Item 1' }, { key: '2', label: 'Item 2' }]" />
@@ -26,7 +17,7 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
 
 figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=486-8345', {
   props: {
-    disabled: figma.enum('State', {
+    disabled: figma.enum('state', {
       disabled: true,
     }),
   },
@@ -41,31 +32,38 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
 
 figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=488-13133', {
   props: {
-    disabled: figma.enum('State', {
-      disabled: true,
-    }),
-    type: figma.enum('Type', {
-      default: undefined,
-      primary: 'primary',
+    placement: figma.enum('Placement', {
+      bottomLeft: 'bottomLeft',
+      bottom: undefined,
+      bottomRight: 'bottomRight',
+      topLeft: 'topLeft',
+      top: 'top',
+      topRight: 'topRight',
     }),
   },
   example: (props) =>
-    html`<a-dropdown-button type="${props.type}" disabled="${props.disabled}">
-  Button Text
+    html`<a-dropdown placement="${props.placement}">
+  <a-button>Hover me</a-button>
   <template #overlay>
     <a-menu :items="[{ key: '1', label: 'Item 1' }, { key: '2', label: 'Item 2' }]" />
   </template>
-</a-dropdown-button>`,
+</a-dropdown>`,
 })
 
 figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=491-15048', {
   props: {
-    disabled: figma.enum('State', {
-      disabled: true,
+    placement: figma.enum('Placement', {
+      bottom: undefined,
+      bottomLeft: 'bottomLeft',
+      bottomRight: 'bottomRight',
+      top: 'top',
+      topLeft: 'topLeft',
+      topRight: 'topRight',
+      no: undefined,
     }),
   },
   example: (props) =>
-    html`<a-dropdown disabled="${props.disabled}">
+    html`<a-dropdown placement="${props.placement}">
   <a-button>Click me</a-button>
   <template #overlay>
     <a-menu :items="[{ key: '1', label: 'Item 1' }, { key: '2', label: 'Item 2' }]" />

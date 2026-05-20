@@ -1,14 +1,8 @@
 import figma, { html } from '@figma/code-connect/html'
 
 figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=706-85883', {
-  props: {
-    disabled: figma.enum('State', {
-      disabled: true,
-    }),
-    multiple: figma.boolean('Multiple'),
-  },
-  example: (props) =>
-    html`<a-upload action="/upload" disabled="${props.disabled}" multiple="${props.multiple}">
+  example: () =>
+    html`<a-upload action="/upload">
   <a-button>
     <upload-outlined />
     Click to Upload
@@ -17,13 +11,8 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
 })
 
 figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=708-86749', {
-  props: {
-    disabled: figma.enum('State', {
-      disabled: true,
-    }),
-  },
-  example: (props) =>
-    html`<a-upload-dragger action="/upload" disabled="${props.disabled}">
+  example: () =>
+    html`<a-upload-dragger action="/upload">
   <p>Drop files here or click to upload</p>
 </a-upload-dragger>`,
 })

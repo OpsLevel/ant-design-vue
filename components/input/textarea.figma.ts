@@ -10,12 +10,7 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     disabled: figma.enum('State', {
       disabled: true,
     }),
-    status: figma.enum('Status', {
-      default: undefined,
-      error: 'error',
-      warning: 'warning',
-    }),
   },
   example: (props) =>
-    html`<a-textarea size="${props.size}" disabled="${props.disabled}" status="${props.status}" placeholder="Enter text" />`,
+    html`<a-textarea size="${props.size}" disabled="${props.disabled}" placeholder="Enter text" />`,
 })
