@@ -1,0 +1,21 @@
+import figma, { html } from '@figma/code-connect/html'
+
+figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=156-1946', {
+  props: {
+    size: figma.enum('Size', {
+      default: undefined,
+      large: 'large',
+      small: 'small',
+    }),
+    disabled: figma.enum('State', {
+      disabled: true,
+    }),
+    status: figma.enum('Status', {
+      default: undefined,
+      error: 'error',
+      warning: 'warning',
+    }),
+  },
+  example: (props) =>
+    html`<a-input${props.size ? ` size="${props.size}"` : ''}${props.disabled ? ' disabled' : ''}${props.status ? ` status="${props.status}"` : ''} placeholder="Placeholder" />`,
+})
