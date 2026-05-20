@@ -4,7 +4,7 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
   props: {
     mode: figma.enum('Mode', {
       horizontal: 'horizontal',
-      vertical: 'vertical',
+      vertical: undefined,
     }),
     theme: figma.enum('Theme', {
       light: undefined,

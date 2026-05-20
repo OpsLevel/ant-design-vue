@@ -12,10 +12,10 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
       small: 'small',
     }),
     bordered: figma.enum('Bordered', {
-      true: undefined,
-      false: 'false',
+      true: true,
+      false: undefined,
     }),
   },
   example: (props) =>
-    html`<a-list item-layout="${props.itemLayout}" size="${props.size}" :bordered="${props.bordered}" :data-source="[]" />`,
+    html`<a-list item-layout="${props.itemLayout}" size="${props.size}" bordered="${props.bordered}" :data-source="[]" />`,
 })
