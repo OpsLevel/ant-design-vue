@@ -29,7 +29,8 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     loading: figma.enum('State', {
       loading: true,
     }),
+    label: figma.string('Text'),
   },
   example: (props) =>
-    html`<a-button type="${props.type}" size="${props.size}" danger="${props.danger}" ghost="${props.ghost}" disabled="${props.disabled}" loading="${props.loading}">Button</a-button>`,
+    html`<a-button type="${props.type}" size="${props.size}" danger="${props.danger}" ghost="${props.ghost}" disabled="${props.disabled}" loading="${props.loading}">${props.label}</a-button>`,
 })

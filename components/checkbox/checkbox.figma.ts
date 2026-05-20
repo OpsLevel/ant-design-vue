@@ -11,7 +11,8 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     disabled: figma.enum('State', {
       disabled: true,
     }),
+    label: figma.string('Label'),
   },
   example: (props) =>
-    html`<a-checkbox :checked="${props.checked}" :indeterminate="${props.indeterminate}" disabled="${props.disabled}">Label</a-checkbox>`,
+    html`<a-checkbox :checked="${props.checked}" :indeterminate="${props.indeterminate}" disabled="${props.disabled}">${props.label}</a-checkbox>`,
 })

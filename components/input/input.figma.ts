@@ -15,7 +15,8 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
       error: 'error',
       warning: 'warning',
     }),
+    placeholder: figma.string('Placeholder'),
   },
   example: (props) =>
-    html`<a-input size="${props.size}" disabled="${props.disabled}" status="${props.status}" placeholder="Placeholder" />`,
+    html`<a-input size="${props.size}" disabled="${props.disabled}" status="${props.status}" placeholder="${props.placeholder}" />`,
 })

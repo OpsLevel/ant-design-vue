@@ -25,7 +25,8 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
       false: 'false',
     }),
     closable: figma.boolean('Closeable'),
+    value: figma.string('Value'),
   },
   example: (props) =>
-    html`<a-tag color="${props.color}" :bordered="${props.bordered}" closable="${props.closable}">Tag</a-tag>`,
+    html`<a-tag color="${props.color}" :bordered="${props.bordered}" closable="${props.closable}">${props.value}</a-tag>`,
 })
