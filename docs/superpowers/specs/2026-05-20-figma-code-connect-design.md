@@ -30,15 +30,15 @@ figma.config.json                   ← project-root config
 components/
   button/
     button.tsx                      (existing)
-    button.figma.tsx                ← Code Connect definition
+    button.figma.ts                 ← Code Connect definition
   input/
-    input.figma.tsx
+    input.figma.ts
   checkbox/
-    checkbox.figma.tsx
+    checkbox.figma.ts
   switch/
-    switch.figma.tsx
+    switch.figma.ts
   tag/
-    tag.figma.tsx
+    tag.figma.ts
 ```
 
 Co-located placement was chosen over a centralized `figma/` directory so Code Connect files live alongside the component source they describe, making prop updates visible in the same PR as the code change.
@@ -48,14 +48,14 @@ Co-located placement was chosen over a centralized `figma/` directory so Code Co
 ```json
 {
   "codeConnect": {
-    "include": ["components/**/*.figma.tsx"]
+    "include": ["components/**/*.figma.ts"]
   }
 }
 ```
 
 ### Code Connect file structure
 
-Each `*.figma.tsx` file (`.tsx` because the `example` function uses JSX syntax, consistent with the rest of this codebase):
+Each `*.figma.ts` file:
 
 1. Imports the Vue component from its local `index.ts`
 2. Calls `figma.connect()` with the Figma node URL, a `props` map, and an `example` render function
@@ -91,7 +91,8 @@ figma.connect(Button, 'FIGMA_NODE_URL', {
     disabled: figma.boolean('Disabled'),
     loading: figma.boolean('Loading'),
   },
-  example: (props) => <Button {...props}>Button</Button>,
+  // exact `example` syntax to be confirmed against installed @figma/code-connect version
+  example: (props) => { /* Vue template string or render function */ },
 })
 ```
 
