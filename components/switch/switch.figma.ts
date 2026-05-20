@@ -9,6 +9,14 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
       default: undefined,
       small: 'small',
     }),
+    checkedChildren: figma.enum('checkedChildren', {
+      default: undefined,
+      text: 'On',
+    }),
+    unCheckedChildren: figma.enum('checkedChildren', {
+      default: undefined,
+      text: 'Off',
+    }),
     disabled: figma.enum('State', {
       disabled: true,
     }),
@@ -17,5 +25,5 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     }),
   },
   example: (props) =>
-    html`<a-switch :checked="${props.checked}" size="${props.size}" disabled="${props.disabled}" loading="${props.loading}" />`,
+    html`<a-switch :checked="${props.checked}" size="${props.size}" checked-children="${props.checkedChildren}" un-checked-children="${props.unCheckedChildren}" disabled="${props.disabled}" loading="${props.loading}" />`,
 })
