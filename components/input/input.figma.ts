@@ -17,5 +17,5 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     }),
   },
   example: (props) =>
-    html`<a-input${props.size ? ` size="${props.size}"` : ''}${props.disabled ? ' disabled' : ''}${props.status ? ` status="${props.status}"` : ''} placeholder="Placeholder" />`,
+    html`<a-input size="${props.size}" disabled="${props.disabled}" status="${props.status}" placeholder="Placeholder" />`,
 })

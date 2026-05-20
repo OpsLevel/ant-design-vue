@@ -31,5 +31,5 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     }),
   },
   example: (props) =>
-    html`<a-button${props.type ? ` type="${props.type}"` : ''}${props.size ? ` size="${props.size}"` : ''}${props.danger ? ' danger' : ''}${props.ghost ? ' ghost' : ''}${props.disabled ? ' disabled' : ''}${props.loading ? ' loading' : ''}>Button</a-button>`,
+    html`<a-button type="${props.type}" size="${props.size}" danger="${props.danger}" ghost="${props.ghost}" disabled="${props.disabled}" loading="${props.loading}">Button</a-button>`,
 })

@@ -3,7 +3,7 @@ import figma, { html } from '@figma/code-connect/html'
 figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vue-3?node-id=312-125131', {
   props: {
     checked: figma.enum('Type', {
-      checked: true,
+      checked: 'true',
     }),
     size: figma.enum('Size', {
       default: undefined,
@@ -17,5 +17,5 @@ figma.connect('https://www.figma.com/design/o50GEVJJglLyQisSsOcd8q/Ant-Design-Vu
     }),
   },
   example: (props) =>
-    html`<a-switch${props.checked ? ' :checked="true"' : ''}${props.size ? ` size="${props.size}"` : ''}${props.disabled ? ' disabled' : ''}${props.loading ? ' loading' : ''} />`,
+    html`<a-switch :checked="${props.checked}" size="${props.size}" disabled="${props.disabled}" loading="${props.loading}" />`,
 })
